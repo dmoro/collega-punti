@@ -11,6 +11,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use("/", routes);
 // parse application/json
-app.listen(8080, async () => {
-    console.log(`Server's Running on Port: ${8080}`);
+app.listen(process.env.PORT, async () => {
+    console.log(`Server's Running on Port: ${process.env.PORT}`);
 });
