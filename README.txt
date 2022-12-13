@@ -6,14 +6,15 @@ Pre-requisiti per l'utilizzo dell'applicazione:
 
 3) Installare le dipendenze di node utilizzando il comando "npm install"
 
-4) Configurare l'ambiente di lancio. L'ambiente di default è local. 
-    Nel file .env è possibile specificare un ambiente differente, modificando le opportune configurazioni
+4) Impostare le credenziali MySql nel file .env. L'ambiente di default è localhost. 
+    Non è necessario specificare la porta, viene usata la porta 3306 di default.
+    Nel file .env è però possibile specificare un ambiente differente, modificando le opportune variabili
 
 5) Definire il model oppure importarlo: 
     - Definire il database "collegapunti". Aggiungere l'istruzione 
         Point.sync() all'interno del metodo sequelize.define(), nello script point.js.
     - nella cartella mysql-export è presente un file .sql self-contained. Importarlo tramite tool SqlServer
-        del client MySql installato in precedenza
+        del client MySql installato in precedenza. Nel model saranno già presenti alcuni punti.
 
 6) Lanciare l'app. L'app si avvia sulla porta specificata nel file .env
 
